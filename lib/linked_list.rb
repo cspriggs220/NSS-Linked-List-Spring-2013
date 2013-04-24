@@ -23,12 +23,9 @@ class LinkedList
 
   def get(n)
     item = @first_item
-    # i = 0
     n.times do # run the loop as many times as (n)
-    # while i < n
       raise IndexError if item.nil? # raise error if no items in list
       item = item.next_list_item
-      # i += 1
     end
     item.payload
   end
@@ -68,16 +65,29 @@ class LinkedList
   # ========= Bonus ========== #
 
   def [](payload)
-    get(payload)
+    get payload
   end
 
-  def []=(n, payload)
+  def []=(n, payload) # setter method
     # ll[1] = "bar-be-que"
     # ll[1].add_item("bar-be-que")
     # get(n = add_item(payload))
   end
 
   def remove(n)
+  end
+
+  # ========= Index exercise ========== #
+
+  def indexOf(string)
+    index = 0
+    until index == self.size
+      if get(index) == string
+        return index
+      else
+        index += 1
+      end
+    end
   end
 
 end
