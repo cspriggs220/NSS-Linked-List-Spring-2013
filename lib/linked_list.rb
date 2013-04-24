@@ -64,14 +64,17 @@ class LinkedList
 
   # ========= Bonus ========== #
 
-  def [](payload)
-    get payload
+  def [](n)
+    get n
   end
 
   def []=(n, payload) # setter method
-    # ll[1] = "bar-be-que"
-    # ll[1].add_item("bar-be-que")
-    # get(n = add_item(payload))
+    item = @first_item
+    raise IndexError if item.nil?
+    n.times do
+      item = item.next_list_item
+    end
+    item.payload = payload
   end
 
   def remove(n)
@@ -84,9 +87,8 @@ class LinkedList
     until index == self.size
       if get(index) == string
         return index
-      else
-        index += 1
       end
+    index += 1
     end
   end
 

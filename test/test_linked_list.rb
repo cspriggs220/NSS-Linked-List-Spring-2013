@@ -89,11 +89,11 @@ class LinkedListItemTest < Test::Unit::TestCase
     assert_equal("grille", ll[2])
   end
 
-  # def test_19_bracket_assignment
-  #   ll = LinkedList.new("foo", "bar", "grille")
-  #   ll[1] = "bar-be-que"
-  #   assert_equal("bar-be-que", ll[1])
-  # end
+  def test_19_bracket_assignment
+    ll = LinkedList.new("foo", "bar", "grille")
+    ll[1] = "bar-be-que"
+    assert_equal("bar-be-que", ll[1])
+  end
 
 #   def test_20_bracket_assignment_results
 #     ll = LinkedList.new

@@ -1,6 +1,6 @@
 class LinkedListItem
   attr_reader :next_list_item
-  attr_reader :payload
+  attr_accessor :payload
 
   # attr_reader :payload => def payload
   #                           return @payload
